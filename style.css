@@ -1,0 +1,107 @@
+/* Importa a fonte Roboto Mono do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "roboto mono", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #ffffff; 
+    color: #000000;
+    padding: 1em 1em;
+}
+
+main {
+    padding: 20px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-container input[type="text"] {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 1em 1em;
+}
+
+.musicList {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.musicList th, .musicList td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.musicList th {
+    background-color: #6e6e6e;
+    color: white;
+    font-weight: bold;
+}
+
+.musicList tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.search-container {
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    align-items: center;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
