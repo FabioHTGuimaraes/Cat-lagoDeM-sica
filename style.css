@@ -8,13 +8,13 @@
 }
 
 body {
-    font-family: "roboto mono", sans-serif;
+    font-family: "Roboto Mono", sans-serif;
     line-height: 1.6;
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: center; 
@@ -24,29 +24,59 @@ header {
     padding: 1em 1em;
 }
 
+/* Main */
 main {
     padding: 20px;
 }
 
+/* Container de pesquisa */
 .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     margin-bottom: 20px;
-    text-align: center;
 }
 
+/* Campo de pesquisa */
 .search-container input[type="text"] {
-    width: 20%;
+    width: 80%;
+    max-width: 400px;
     padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    padding: 1em 1em;
 }
 
+/* Botão de pesquisa */
+button {
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    background-color: #004085;
+}
+
+/* Tabela de músicas */
 .musicList {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
     border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .musicList th, .musicList td {
@@ -65,43 +95,40 @@ main {
     background-color: #f2f2f2;
 }
 
-.search-container {
-    align-items: center;
-    margin-bottom: 20px;
+/* Responsividade */
+@media (max-width: 768px) {
+    .search-container input[type="text"],
+    button {
+        width: 100%;
+        max-width: 100%;
+        font-size: 18px;
+    }
+
+    .musicList th, .musicList td {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
 
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    align-items: center;
-}
+@media (max-width: 480px) {
+    .search-container {
+        padding: 10px;
+    }
 
-button {
-    padding: 10px 20px;
-    font-weight: bold;
-    color: #fff;
-    align-items: center;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;
-    transition: background-color 0.3s ease;
-}
+    .search-container input[type="text"] {
+        padding: 15px;
+    }
 
-button:hover {
-    background-color: #0056b3;
-}
+    button {
+        padding: 15px;
+        font-size: 18px;
+    }
 
-button:active {
-    background-color: #004085;
-}
+    .musicList {
+        font-size: 12px;
+    }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+    .musicList th, .musicList td {
+        padding: 5px;
+    }
 }
